@@ -1,5 +1,5 @@
-# repo-template-python
-This is a template repository for data science projects done in Python.
+# earnings-call-audio-modeling
+This is a template repository for a proof-of-concept model to generate insights from earnings calls in order to make predictions on stock market prices.
 
 ### Using this template
 To use the following template, click the "Use This Template button" and follow the instructions to create a new repository.  Fill out the information below, deleting parts that are not specific to your project (e.g., Prerequisites).  This template contains a number of code templates in the modeling sections (40-90 series), which may be deleted and renumbered according to the project objectives.  The format of this repository goes well with nbdev.  Take a look at the documentation there and review the tutorials to get the best usage out of this repository.  See the `box-authentication` notebook if you need to do authentication via Box (for projects with security contracts or PII data).  Note that this authentication method is not currently guaranteed to work on ACCRE.
