@@ -1,10 +1,7 @@
 # earnings-call-audio-modeling
 This is a template repository for a proof-of-concept model to generate insights from earnings calls in order to make predictions on stock market prices.
 
-### Using this template
-To use the following template, click the "Use This Template button" and follow the instructions to create a new repository.  Fill out the information below, deleting parts that are not specific to your project (e.g., Prerequisites).  This template contains a number of code templates in the modeling sections (40-90 series), which may be deleted and renumbered according to the project objectives.  The format of this repository goes well with nbdev.  Take a look at the documentation there and review the tutorials to get the best usage out of this repository.  See the `box-authentication` notebook if you need to do authentication via Box (for projects with security contracts or PII data).  Note that this authentication method is not currently guaranteed to work on ACCRE.
-
-### Prerequisites
+### Prerequisites (TBD)
 To most easily run this code out of the box, the following packages must be installed:
 * pandas
 * numpy
@@ -33,9 +30,11 @@ This is easiest to achieve through first installing an Anaconda distribution, wh
 
 Provide an overview of the goals and deliverables of the project. Mention any relevant details or issues. 
 
+Make use of transformer models to extract data from earnings calls. This data will be used for tasks such as predicting stock prices for companies associated with each call. The model created is intended to demonstrate a proof-of-concept, success will not be measured by model performance. However, future work on this project should focus on improving model performance for related use-cases. 
+
 # Background  
 
-Provide a broad overview of the purpose of the project.
+A topic of interest in the finance community has been extracting data from various sources such as earnings calls in order to predict performance of companies. Previous work has been done with NLP to make predictions using text data, however transformers now make it possible to make predictions with audio data. Application of this state-of-the-art modeling technique will work to solve an existing problem in the finance community while also opening the door for future improvement on this project and other new projects. 
 
 # Data
 
@@ -43,21 +42,21 @@ Describe the data - what kind of data is it?  Describe the general format, and p
 
 ## Data security
 
-If there are any security concerns or requirements regarding the data, they should be described here.
+All data used within this course is publicly available from [earningscast](https://earningscast.com/).
 
-## Counts
+## Counts (TBD)
 
 Describe the overall size of the dataset and the relative ratio of positive/negative examples for each of the response variables.
 
-# Models
+# Models (TBD)
 
 Clearly identify each of the response variables of interest.  Any additional desired analysis should also be described here.
 
 # Timeline
 
-Outline the desired timeline of the project and any explicit deadlines.
+This project will be completed during Vanderbilt's 2022 Spring Semester, beginning January 17th and ending April 29th. Intermediate progress updates will occur weekly, every Friday unless scheduled otherwise. 
 
-# Repo Structure 
+# Repo Structure (TBD)
 
 Give a description of how the repository is structured. Example structure description below:
 
@@ -76,15 +75,10 @@ All files which appear in the repo should be able to run, and not contain error 
 **Zoom link**:  
 
 # Resources 
-* **Python usage**: Whirlwind Tour of Python, Jake VanderPlas ([Book](https://learning.oreilly.com/library/view/a-whirlwind-tour/9781492037859/), [Notebooks](https://github.com/jakevdp/WhirlwindTourOfPython))
-* **Data science packages in Python**: [Python Data Science Handbook, Jake VanderPlas](https://jakevdp.github.io/PythonDataScienceHandbook/) 
 * **HuggingFace**: [Website](https://huggingface.co/transformers/index.html), [Course/Training](https://huggingface.co/course/chapter1), [Inference using pipelines](https://huggingface.co/transformers/task_summary.html), [Fine tuning models](https://huggingface.co/transformers/training.html)
-* **fast.ai**: [Course](https://course.fast.ai/), [Quick start](https://docs.fast.ai/quick_start.html)
-* **h2o**: [Resources, documentation, and API links](https://docs.h2o.ai/#h2o)
-* **nbdev**: [Overview](https://nbdev.fast.ai/), [Tutorial](https://nbdev.fast.ai/tutorial.html)
-* **Git tutorials**: [Simple Guide](https://rogerdudler.github.io/git-guide/), [Learn Git Branching](https://learngitbranching.js.org/?locale=en_US)
-* **ACCRE how-to guides**: [DSI How-tos](https://github.com/vanderbilt-data-science/how-tos)  
 
 # Contact Info
 
-Add contact information for any project stakeholders. Include name, email and title. 
+Logan King, M.S. in Data Science Candidate  
+Vanderbilt University  
+logan.a.king@Vanderbilt.Edu  
