@@ -67,12 +67,9 @@ All files which appear in the repo should be able to run, and not contain error 
 # Project logistics
 
 **Sprint planning**:  
-**Demo**:  
+Weekly, Fridays
 
 **Data location**:  
-
-**Slack channel**:  
-**Zoom link**:  
 
 # Resources 
 * **HuggingFace**: [Website](https://huggingface.co/transformers/index.html), [Course/Training](https://huggingface.co/course/chapter1), [Inference using pipelines](https://huggingface.co/transformers/task_summary.html), [Fine tuning models](https://huggingface.co/transformers/training.html)
