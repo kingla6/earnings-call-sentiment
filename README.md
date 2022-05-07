@@ -1,20 +1,5 @@
 # earnings-call-audio-modeling
-This is a template repository for a proof-of-concept model to generate insights from earnings calls in order to make predictions on stock market prices.
-
-### Prerequisites (TBD)
-To most easily run this code out of the box, the following packages must be installed:
-* pandas
-* numpy
-* scikit-learn
-* matplotlib
-* seaborn
-* great expectations
-* h2o
-* fastai
-* huggingface
-* datasets
-
-This is easiest to achieve through first installing an Anaconda distribution, which installs the first 5 packages and all of their dependencies.  The install directions to the other packages may be found on their documentation pages.
+This is a repository for an exploratory project with sentiment analysis of earnings call audio data using transformer models.
 
 # Quick navigation
 [Background](#background)  
@@ -28,51 +13,38 @@ This is easiest to achieve through first installing an Anaconda distribution, wh
 
 # Goal
 
-Provide an overview of the goals and deliverables of the project. Mention any relevant details or issues. 
-
-Make use of transformer models to extract data from earnings calls. This data will be used for tasks such as predicting stock prices for companies associated with each call. The model created is intended to demonstrate a proof-of-concept, success will not be measured by model performance. However, future work on this project should focus on improving model performance for related use-cases. 
+Throughout the semester, the goals of this project have shifted. Initially, the plan was to create a predictive model to determine stock price performance based on sentiments gathered from audio data for earnings calls. What has been done so far is sentiment extraction from earnings call audio data and exploratory analysis of said sentiments. Given the findings from exploratory data analysis, modeling may not be very reliable using just these audio data sentiments. There are numerous possibilities of future work to be done to build on the foundation that was developed by this project. These are datailed further throughout the readme and within the code notebooks on the repo.
 
 # Background  
 
-A topic of interest in the finance community has been extracting data from various sources such as earnings calls in order to predict performance of companies. Previous work has been done with NLP to make predictions using text data, however transformers now make it possible to make predictions with audio data. Application of this state-of-the-art modeling technique will work to solve an existing problem in the finance community while also opening the door for future improvement on this project and other new projects. 
+A topic of interest in the finance community has been extracting sentiments from various sources such as earnings calls in order to predict performance of companies. Previous work has been done with NLP to generate sentiments from text data, however transformers now make it possible to generate sentiments from audio data. These sentiments can be used to model performance of stock prices. Application of these state-of-the-art transformer models will work to solve an existing problem in the finance community while also opening the door for future improvement on this project and other new projects. 
+
+# Current Status
+
+Sentiment analysis has been conducted on nearly 200 earnings calls from Q4 of 2021. The resulting sentiment datasets have been explored in detail within the [20-eda.ipynb file](https://github.com/kingla6/earnings-call-sentiment/blob/main/20-eda.ipynb). It was discovered that the large hubert model used to generate sentiments was likely making its predictions based on volume and tone of the speaker rather than any of the content of their spoken words. It is unclear whether or not these audio sentiments alone will be useful for predictive modeling. I am under the assumption that a pairing of textual sentiment analysis with audio sentiment analysis may be more useful in making predictions than audio sentiments alone. More detail regarding my process and findings is provided in each of the code notebooks within the repo. 
 
 # Data
 
-Describe the data - what kind of data is it?  Describe the general format, and potential quirks.
+The data contains 193 company earnings calls for Q4 of 2021 that were available in January 2022. All audio files are stored in the [audio-files section](https://github.com/kingla6/earnings-call-sentiment/tree/main/data/audio-files) of the [data folder](https://github.com/kingla6/earnings-call-sentiment/tree/main/data). Within the data folder, a [detailed log of all the audio files](https://github.com/kingla6/earnings-call-sentiment/blob/main/data/data.csv) is contained as well as the [output file for sentiment scores of company earnings calls](https://github.com/kingla6/earnings-call-sentiment/blob/main/data/audio_sentiment.csv).
 
 ## Data security
 
-All data used within this course is publicly available from [earningscast](https://earningscast.com/).
+All data used within this course is publicly available from [earningscall.biz](https://earningscall.biz).
 
-## Counts (TBD)
+# Transformer
 
-Describe the overall size of the dataset and the relative ratio of positive/negative examples for each of the response variables.
-
-# Models (TBD)
-
-Clearly identify each of the response variables of interest.  Any additional desired analysis should also be described here.
+The transformer model used for this project was a [large hubert model trained on the superb-er dataset](https://huggingface.co/superb/hubert-large-superb-er), all available on huggingface. 
 
 # Timeline
 
-This project will be completed during Vanderbilt's 2022 Spring Semester, beginning January 17th and ending April 29th. Intermediate progress updates will occur weekly, every Friday unless scheduled otherwise. 
+Work for the project to this point has taken place furing the Vanderbilt 2022 Spring Semester. Work is expected to continue following the conclusion of the semester pendkng promising results or outside interest. 
 
 # Repo Structure (TBD)
 
 Give a description of how the repository is structured. Example structure description below:
 
-The repo is structured as follows: Notebooks are grouped according to their series (e.g., 10, 20, 30, etc) which reflects the general task to be performed in those notebooks.  Start with the *0 notebook in the series and add other investigations relevant to the task in the series (e.g., `11-cleaned-scraped.ipynb`).  If your notebook is extremely long, make sure you've utilized nbdev reuse capabilities and consider whether you can divide the notebook into two notebooks.
+The repo is structured as follows: Notebooks are grouped according to their series (e.g., 10, 20, 30, etc) which reflects the general task to be performed in those notebooks. These code notebooks contain both code, explanations, and detaild writeups of findings. Data used for the project is also made available in the [data folder](https://github.com/kingla6/earnings-call-sentiment/tree/main/data).
 
-All files which appear in the repo should be able to run, and not contain error or blank cell lines, even if they are relatively midway in development of the proposed task. All notebooks relating to the analysis should have a numerical prefix (e.g., 31-) followed by the exploration (e.g. 31-text-labeling). Any utility notebooks should not be numbered, but be named according to their purpose. All notebooks should have lowercase and hyphenated titles (e.g., 10-process-data not 10-Process-Data). All notebooks should adhere to literate programming practices (i.e., markdown writing to describe problems, assumptions, conclusions) and provide adequate although not superfluous code comments.
-
-# Project logistics
-
-**Sprint planning**:  
-Weekly, Fridays
-
-**Data location**:  
-
-# Resources 
-* **HuggingFace**: [Website](https://huggingface.co/transformers/index.html), [Course/Training](https://huggingface.co/course/chapter1), [Inference using pipelines](https://huggingface.co/transformers/task_summary.html), [Fine tuning models](https://huggingface.co/transformers/training.html)
 
 # Contact Info
 
