@@ -2,13 +2,14 @@
 This is a repository for an exploratory project with sentiment analysis of earnings call audio data using transformer models.
 
 # Quick navigation
+[Goal](#goal)  
 [Background](#background)  
+[Current Status](#current-status)  
 [Data](#data)  
-[Models](#models)  
+[Transformer](#transformer)  
 [Timeline](#timeline)  
+[Future Work](#future-work)  
 [Repo Structure](#repo-structure)  
-[Logistics](#project-logistics)  
-[Resources](#resources)  
 [Contact](#contact-info)
 
 # Goal
@@ -39,7 +40,11 @@ The transformer model used for this project was a [large hubert model trained on
 
 Work for the project to this point has taken place furing the Vanderbilt 2022 Spring Semester. Work is expected to continue following the conclusion of the semester pendkng promising results or outside interest. 
 
-# Repo Structure (TBD)
+# Future Work
+
+Future enhancements to the project are listed as issues on the [project board](https://github.com/kingla6/earnings-call-sentiment/projects/1). This board shows what has already been done and what has yet to be completed. 
+
+# Repo Structure
 
 Give a description of how the repository is structured. Example structure description below:
 
